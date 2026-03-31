@@ -4,7 +4,7 @@
 
 ## 0. 目录与约定
 
-- 项目根目录：/Skill Memory/VillagerAgent-Minecraft-multiagent-framework
+- 项目根目录：`/hpc2hdd/home/jchen873/Skill Memory/VillagerAgent-Minecraft-multiagent-framework`
 - Minecraft 服务端目录：`~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft`
 - 本文默认：
   - 主机 `host=127.0.0.1`
@@ -16,7 +16,7 @@
 在项目根目录执行：
 
 ```bash
-cd Skill Memory/VillagerAgent-Minecraft-multiagent-framework
+cd "/hpc2hdd/home/jchen873/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
 source venv1/bin/activate
 ```
 
@@ -32,8 +32,13 @@ source venv1/bin/activate
 ### 2.1 进入服务器目录
 
 ```bash
-cd /VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft
+cd "/hpc2hdd/home/jchen873/Skill Memory/VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft"
 ```
+
+说明：
+
+- 路径最前面的 `/` 代表从系统根目录开始查找，不能省略真实前缀（`/hpc2hdd/home/jchen873/...`）。
+- 目录名包含空格（如 `Skill Memory`）时，务必使用双引号包裹整个路径。
 
 ### 2.2 启动“新世界”服务器（推荐）
 
@@ -64,7 +69,7 @@ cd /VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft
 回到项目根目录并激活环境：
 
 ```bash
-cd "~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
+cd "/hpc2hdd/home/jchen873/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
 source venv1/bin/activate
 ```
 
@@ -170,14 +175,14 @@ result/<task_name>/
 ### 终端 1（启服）
 
 ```bash
-cd "~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft"
+cd "/hpc2hdd/home/jchen873/Skill Memory/VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft"
 ./start_server_fresh.sh
 ```
 
 ### 终端 2（主实验）
 
 ```bash
-cd "~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
+cd "/hpc2hdd/home/jchen873/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
 source venv1/bin/activate
 python config.py --task farming --api_model gpt-5.1 --host 127.0.0.1 --port 25565 --agent_num 3
 # 准备 base_agent_multi_test_config.json
@@ -187,7 +192,7 @@ python start_with_config.py
 ### 终端 3（Judger）
 
 ```bash
-cd "~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
+cd "/hpc2hdd/home/jchen873/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
 source venv1/bin/activate
 python env/farm_craft_judger.py --idx 0 --host 127.0.0.1 --port 25565 \
   --agent_num 3 --agent_names Alice,Bob,Cindy --task_name <task_name>
