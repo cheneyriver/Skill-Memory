@@ -4,7 +4,7 @@
 
 ## 0. 目录与约定
 
-- 项目根目录：`~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework`
+- 项目根目录：/Skill Memory/VillagerAgent-Minecraft-multiagent-framework
 - Minecraft 服务端目录：`~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft`
 - 本文默认：
   - 主机 `host=127.0.0.1`
@@ -16,7 +16,7 @@
 在项目根目录执行：
 
 ```bash
-cd "~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework"
+cd Skill Memory/VillagerAgent-Minecraft-multiagent-framework
 source venv1/bin/activate
 ```
 
@@ -32,7 +32,7 @@ source venv1/bin/activate
 ### 2.1 进入服务器目录
 
 ```bash
-cd "~/Skill Memory/VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft"
+cd /VillagerAgent-Minecraft-multiagent-framework/MineCraft/MineCraft/MineCraft
 ```
 
 ### 2.2 启动“新世界”服务器（推荐）
